@@ -15,7 +15,8 @@
         <!-- Card 1 -->
         <div class="cards">
             <div class="cardContent">
-                <img src="/Source/tetrisIcon.png" alt="" class="cardIcon">
+                <!-- <img src="/Source/tetrisIcon.png" alt="" class="cardIcon"> -->
+                <p>TETRIS</p>
             </div>
             <div class="cardBgEffect"></div>
             <div class="cardBG" style="background-image: url(/Source/1.jpg);"></div>
@@ -23,6 +24,7 @@
         <!-- Card 2 -->
         <div class="cards">
             <div class="cardContent">
+                <p>MINESWEEPER</p>
             </div>
             <div class="cardBgEffect"></div>
             <div class="cardBG" style="background-image: url(/Source/2.jpg);"></div>
@@ -30,6 +32,7 @@
         <!-- Card 3 -->
         <div class="cards">
             <div class="cardContent">
+                <p>SNAKE</p>
             </div>
             <div class="cardBgEffect"></div>
             <div class="cardBG" style="background-image: url(/Source/3.jpg);"></div>
