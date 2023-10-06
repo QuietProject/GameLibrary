@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    height: 200vh;
+    width: 100vw;
+    background-image:
+        url("/Source/bgTile.svg"),
+        linear-gradient(270deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+    background-size:
+        25%,
+        400%;
+    background-position:
+        52vw 52vw,
+        center;
+    background-repeat:
+        repeat,
+        repeat-y;
+    animation: gradient 10s ease infinite;
+    overflow: scroll;
+}
+
+h1 {
+    font-family: 'Fira Mono', monospace;
+    color: white;
+    text-shadow: 0 0 5px white;
+}
+
+p {
+    position: absolute;
+    font-family: "Rubik", sans-serif;
+    color: white;
+    text-shadow: 0 0 5px white;
+    top: 10%;
+    font-size: 7.5vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position:
+            52vw 52vw,
+            0% 50%;
+    }
+
+    50% {
+        background-position:
+            52vw 52vw,
+            100% 50%;
+    }
+
+    100% {
+        background-position:
+            52vw 52vw,
+            0% 50%;
+    }
+}
+
+.pageTitle {
+    position: absolute;
+    color: white;
+    top: 40vh;
+    font-family: 'Fira Mono', monospace;
+    font-size: 10vw;
+}
+
+.cardContainer {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    top: 100vh;
+    overflow: hidden;
+}
+
+.cards {
+    position: absolute;
+    height: 55vh;
+    width: 20vw;
+    bottom: -35vh;
+    border: solid rgb(50, 150, 250) 2px;
+    transition: all 0.1s;
+    border: solid rgb(50, 150, 250) 2px;
+    overflow: hidden;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.cards:hover {
+    bottom: -25vh;
+}
+
+.cardIcon {
+    position: absolute;
+    color: white;
+    height: 20%;
+    bottom: 5%;
+}
+
+.cardSelected {
+    position: absolute;
+    height: 70vh;
+    width: 60vw;
+    bottom: 25vh;
+    transition: all 0.25s;
+    border: solid rgb(50, 150, 250) 2px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.cardSelected:hover {
+    bottom: 25vh !important;
+}
+
+.cardBG {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    filter: sepia(100%) hue-rotate(160deg) brightness(75%);
+    z-index: 1;
+}
+
+.cardBgEffect {
+    position: absolute;
+    width: 60vw;
+    height: 70vh;
+    background-image: linear-gradient(rgb(50, 150, 250, 0.15), rgba(50, 150, 250, 0.05)3px, transparent 3px, transparent 9px);
+    background-size: 100% 12px;
+    animation: paning-BG 30s infinite linear;
+    z-index: 2;
+}
+
+@keyframes paning-BG {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 0% -100%;
+    }
+}
+
+.cardContent {
+    position: absolute;
+    height: calc(100% - 1vw);
+    width: calc(100% - 1vw);
+    top: 0.5vw;
+    left: 0.5vw;
+    border: solid rgb(50, 150, 250) 1px;
+    z-index: 3;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
