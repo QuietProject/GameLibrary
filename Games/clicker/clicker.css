@@ -1,0 +1,39 @@
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.leftPanel {
+    position: absolute;
+    height: 100vh;
+    width: 25vw;
+    background-color: red;
+}
+
+.centerPanel {
+    position: absolute;
+    height: 100vh;
+    width: 50vw;
+    left: 25vw;
+    background-color: blue;
+}
+
+.rightPanel {
+    position: absolute;
+    height: 100vh;
+    width: 25vw;
+    left: 75vw;
+    background-color: green;
+}

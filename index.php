@@ -15,7 +15,6 @@
         <!-- Card 1 -->
         <div class="cards">
             <div class="cardContent">
-                <!-- <img src="/Source/tetrisIcon.png" alt="" class="cardIcon"> -->
                 <p>TETRIS</p>
             </div>
             <div class="cardBgEffect"></div>
@@ -39,7 +38,9 @@
         </div>
         <!-- Card 4 -->
         <div class="cards">
-            <div class="cardContent"></div>
+            <div class="cardContent">
+                <p>CLICKER</p>
+            </div>
             <div class="cardBgEffect"></div>
             <div class="cardBG" style="background-image: url(/Source/4.jpg);"></div>
         </div>
