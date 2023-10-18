@@ -4,6 +4,10 @@
     margin: 0;
     border: 0;
     padding: 0;
+    /* Colors */
+    --baseLight:#c8c8c8;
+    --base: #646464;
+    --baseDark: #3c3c3c;
 }
 
 *::-webkit-scrollbar {
@@ -13,21 +17,25 @@
 body {
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
+    background-color: var(--baseDark);
 }
 
 .leftPanel {
     position: absolute;
     height: 100vh;
     width: 25vw;
-    background-color: red;
+    top: 0;
+    background-color: var(--base);
 }
 
 .centerPanel {
     position: absolute;
     height: 100vh;
-    width: 50vw;
-    left: 25vw;
-    background-color: blue;
+    width: 49vw;
+    left: 25.5vw;
+    top: 0;
+    background-color: var(--base);
 }
 
 .rightPanel {
@@ -35,5 +43,85 @@ body {
     height: 100vh;
     width: 25vw;
     left: 75vw;
-    background-color: green;
+    top: 0;
+    background-color: var(--base);
+}
+
+.pointCounter {
+    position: absolute;
+    height: 7.5vw;
+    width: 20vw;
+    top: 5vh;
+    left: 2.5vw;
+    background-color: black;
+}
+
+.manualAdder {
+    position: absolute;
+    width: 1vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    top: 30vh;
+    background-color: var(--baseLight);
+    animation: potatoRotate 5s forwards infinite linear;
+}
+
+@keyframes potatoRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.manualAdder:hover {
+    animation: manualAdderHover 0.25s both;
+    transform: scale(105%);
+}
+
+@keyframes manualAdderHover {
+    25% {
+        transform: scale(105%);
+    }
+
+    50% {
+        transform: scale(101%);
+    }
+
+    75% {
+        transform: scale(104%);
+    }
+
+    100% {
+        transform: scale(103%);
+    }
+}
+
+.manualAdder:active {
+    animation: manualAdderActive 0.25s both;
+    transform: scale(95%);
+}
+
+@keyframes manualAdderActive {
+    0% {
+        transform: scale(103%);
+    }
+
+    40% {
+        transform: scale(94%);
+    }
+
+    60% {
+        transform: scale(99%);
+    }
+
+    80% {
+        transform: scale(96%);
+    }
+
+    100% {
+        transform: scale(97%);
+    }
 }
