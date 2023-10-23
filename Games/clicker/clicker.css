@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
     -ms-overflow-style: none;
     scrollbar-width: none;
     margin: 0;
     border: 0;
     padding: 0;
+    font-family: 'Space Mono', monospace;
     /* Colors */
-    --baseLight:#c8c8c8;
+    --baseLight: #c8c8c8;
     --base: #646464;
     --baseDark: #3c3c3c;
+    --color: #6400c8;
 }
 
 *::-webkit-scrollbar {
@@ -18,7 +22,7 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    background-color: var(--baseDark);
+    background-color: var(--color);
 }
 
 .leftPanel {
@@ -45,25 +49,16 @@ body {
     left: 75vw;
     top: 0;
     background-color: var(--base);
-}
-
-.pointCounter {
-    position: absolute;
-    height: 7.5vw;
-    width: 20vw;
-    top: 5vh;
-    left: 2.5vw;
-    background-color: black;
+    overflow: scroll;
 }
 
 .manualAdder {
     position: absolute;
-    width: 1vw;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
     top: 30vh;
+    border-radius: 5px;
     background-color: var(--baseLight);
-    animation: potatoRotate 5s forwards infinite linear;
+    /* animation: potatoRotate 5s forwards infinite linear; */
+    transition: all 0.25s;
 }
 
 @keyframes potatoRotate {
@@ -77,6 +72,7 @@ body {
 }
 
 .manualAdder:hover {
+    cursor: pointer;
     animation: manualAdderHover 0.25s both;
     transform: scale(105%);
 }
@@ -124,4 +120,41 @@ body {
     100% {
         transform: scale(97%);
     }
+}
+
+
+.pointCounter {
+    position: absolute;
+    height: 7.5vw;
+    width: 25vw;
+    top: 5vh;
+    left: 0;
+    background-color: var(--color);
+}
+
+.pointNumber {
+    color: white;
+    font-size: 5vh;
+    text-align: center;
+}
+
+.upgradeBuy {
+    position: relative;
+    height: 12.5vh;
+    width: 100%;
+    right: 0;
+    border-bottom: 0.5vw var(--color) solid;
+}
+
+.upgradePol {
+    position: relative;
+    background-color: var(--baseLight);
+    height: 80%;
+    aspect-ratio: 1/1;
+    top: 10%;
+    left: 5%;
+}
+
+.upgradeBuy:hover{
+    cursor: pointer;
 }
