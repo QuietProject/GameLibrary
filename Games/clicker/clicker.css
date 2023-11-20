@@ -31,12 +31,14 @@ body {
     width: 25vw;
     top: 0;
     background-color: var(--base);
+    display: flex;
+    justify-content: center;
 }
 
 .centerPanel {
     position: absolute;
     height: 100vh;
-    width: 49vw;
+    width: 44vw;
     left: 25.5vw;
     top: 0;
     background-color: var(--base);
@@ -45,30 +47,21 @@ body {
 .rightPanel {
     position: absolute;
     height: 100vh;
-    width: 25vw;
-    left: 75vw;
+    width: 30vw;
+    left: 70vw;
     top: 0;
     background-color: var(--base);
     overflow: scroll;
 }
 
 .manualAdder {
-    position: absolute;
+    position: relative;
     top: 30vh;
+    height: 1vw;
+    width: 1vw;
     border-radius: 5px;
     background-color: var(--baseLight);
-    /* animation: potatoRotate 5s forwards infinite linear; */
-    transition: all 0.25s;
-}
-
-@keyframes potatoRotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+    transition: all 0.5s ease-in-out;
 }
 
 .manualAdder:hover {
@@ -155,6 +148,30 @@ body {
     left: 5%;
 }
 
-.upgradeBuy:hover{
+.upgradeBuy:hover {
     cursor: pointer;
+}
+
+.upgradeBuyText {
+    position: absolute;
+    color: white;
+    font-size: 2.5vh;
+    bottom: 0.75vh;
+    left: 7.5vw;
+}
+
+.upgradeName {
+    position: absolute;
+    color: white;
+    font-size: 4vh;
+    bottom: 4vh;
+    left: 7.5vw;
+}
+
+.upgradeCount {
+    position: absolute;
+    color: white;
+    font-size: 5vh;
+    bottom: 2.5vh;
+    left: 25vw;
 }
