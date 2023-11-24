@@ -4,9 +4,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="/CSS/style.css">
     <title>index</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            margin: 0;
+            border: 0;
+            padding: 0;
+            font-family: 'Space Mono', monospace;
+            /* Colors */
+            --baseLight: #c8c8c8;
+            --base: #646464;
+            --baseDark: #3c3c3c;
+            --color: #6400c8;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            background-color: var(--color);
+        }
+
+        .leftPanel {
+            position: absolute;
+            height: 100vh;
+            width: 25vw;
+            top: 0;
+            background-color: var(--base);
+            display: flex;
+            justify-content: center;
+        }
+
+        .centerPanel {
+            position: absolute;
+            height: 100vh;
+            width: 44vw;
+            left: 25.5vw;
+            top: 0;
+            background-color: var(--base);
+        }
+
+        .rightPanel {
+            position: absolute;
+            height: 100vh;
+            width: 30vw;
+            left: 70vw;
+            top: 0;
+            background-color: var(--base);
+            overflow: scroll;
+        }
+
+        .manualAdder {
+            position: relative;
+            top: 30vh;
+            height: 1vw;
+            width: 1vw;
+            border-radius: 5px;
+            background-color: var(--baseLight);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .manualAdder:hover {
+            cursor: pointer;
+            animation: manualAdderHover 0.25s both;
+            transform: scale(105%);
+        }
+
+        @keyframes manualAdderHover {
+            25% {
+                transform: scale(105%);
+            }
+
+            50% {
+                transform: scale(101%);
+            }
+
+            75% {
+                transform: scale(104%);
+            }
+
+            100% {
+                transform: scale(103%);
+            }
+        }
+
+        .manualAdder:active {
+            animation: manualAdderActive 0.25s both;
+            transform: scale(95%);
+        }
+
+        @keyframes manualAdderActive {
+            0% {
+                transform: scale(103%);
+            }
+
+            40% {
+                transform: scale(94%);
+            }
+
+            60% {
+                transform: scale(99%);
+            }
+
+            80% {
+                transform: scale(96%);
+            }
+
+            100% {
+                transform: scale(97%);
+            }
+        }
+
+
+        .pointCounter {
+            position: absolute;
+            height: 7.5vw;
+            width: 25vw;
+            top: 5vh;
+            left: 0;
+            background-color: var(--color);
+        }
+
+        .pointNumber {
+            color: white;
+            font-size: 5vh;
+            text-align: center;
+        }
+
+        .upgradeBuy {
+            position: relative;
+            height: 12.5vh;
+            width: 100%;
+            right: 0;
+            border-bottom: 0.5vw var(--color) solid;
+        }
+
+        .upgradePol {
+            position: relative;
+            background-color: var(--baseLight);
+            height: 80%;
+            aspect-ratio: 1/1;
+            top: 10%;
+            left: 5%;
+        }
+
+        .upgradeBuy:hover {
+            cursor: pointer;
+        }
+
+        .upgradeBuyText {
+            position: absolute;
+            color: white;
+            font-size: 2.5vh;
+            bottom: 0.75vh;
+            left: 7.5vw;
+            user-select: none;
+        }
+
+        .upgradeName {
+            position: absolute;
+            color: white;
+            font-size: 4vh;
+            bottom: 4vh;
+            left: 7.5vw;
+            user-select: none;
+        }
+
+        .upgradeCount {
+            position: absolute;
+            color: white;
+            font-size: 5vh;
+            bottom: 2.5vh;
+            left: 25vw;
+            user-select: none;
+        }
+    </style>
 </head>
 
 <body>
