@@ -16,7 +16,7 @@ body {
     height: 200vh;
     width: 100vw;
     background-image:
-        url("/Source/bgTile.svg");
+        url("bgTile.svg");
     background-color: rgb(25, 75, 175);
     background-size:
         25%,
